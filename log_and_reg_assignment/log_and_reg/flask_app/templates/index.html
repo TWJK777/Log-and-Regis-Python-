@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Log and Reg</title>
+</head>
+<body>
+    <div>
+        <form action="/register" method="post" class="nana">
+            <h2 class="text-center">Registration</h2>
+            {% with messages = get_flashed_messages() %}    
+            {% if messages %}                           
+            {% for message in messages %}           
+                <p>{{message}}</p>                
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
+            <div class="form">
+                <label for="first_name">First Name:</label>
+                <input type="text" name="first_name"  class="ramen">
+            </div>
+            <div class="form">
+                <label for="last_name">Last Name:</label>
+                <input type="text" name="last_name"  class="ramen">
+            </div>
+            <div class="form">
+                <label for="email">Email:</label>
+                <input type="text" name="email"  class="ramen">
+            </div>
+            <div class="form">
+                <label for="password">Password:</label>
+                <input type="text" name="password"  class="ramen">
+            </div>
+            <div class="form">
+                <label for="password confirmation">Password confirmation:</label>
+                <input type="text" name="password confirmation"  class="ramen">
+            </div>
+            <input type="submit" value="Register" class="button">
+        </form>
+    
+    </div>
+    
+    <div>
+        <form action="/login" method="post" class="nana">
+            <h2 class="text-center">Login</h2>
+            <div class="form">
+                <label for="email">Email:</label>
+                <input type="text" name="email"  class="ramen">
+            </div>
+            <div class="form">
+                <label for="password">Password:</label>
+                <input type="text" name="password"  class="ramen">
+            </div>
+            <input type="submit" value="Login" class="button">
+        </form>
+    </div>
+   
+
+
+</body>
+</html>
